@@ -13,3 +13,8 @@ after_success:
     - docker build -t ryegoryshev/multi-webclient ./WebClient/
     - docker build -t ryegoryshev/multi-api ./API/
     - docker build -t ryegoryshev/multi-nginx ./nginx/
+
+    - echo "$Docker_Password" | docker login -u "$Docker_ID" --password-stdin
+    - docker push ryegoryshev/multi-webclient
+    - docker push ryegoryshev/multi-api
+    - docker push ryegoryshev/multi-nginx
