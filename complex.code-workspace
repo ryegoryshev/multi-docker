@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "WebClient"
+		},
+		{
+			"path": "API"
+		},
+		{
+			"path": "nginx"
+		}
+	],
+	"settings": {}
+}
