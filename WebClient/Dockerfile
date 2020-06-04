@@ -1,4 +1,4 @@
-FROM node:13.12.0-alpine as builder
+FROM node:13.12.0-alpine as build-stage
 
 WORKDIR /app
 
@@ -10,9 +10,9 @@ RUN npm install react-scripts@3.4.1 -g
 
 COPY ./ ./
 
-CMD ["npm", "build"]
+CMD ["npm", "run", "build"]
 
 FROM nginx
 EXPOSE 3000 
-COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=build-stage /app/build/ /usr/share/nginx/html
+COPY --from=build-stage /app/nginx/default.conf /etc/nginx/conf.d/default.conf
