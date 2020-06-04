@@ -24,12 +24,12 @@ class App extends Component {
   }
 
   async fetchCalculationHistory() {
-    const history = await axios.get(`http://${Configuration.API_HOST}:${Configuration.API_PORT}/Calculations`);
+    const history = await axios.get(`/Calculations`);
     return history;
   }
 
   async saveCalculation(calculation) {
-   const result = await axios.post(`http://${Configuration.API_HOST}:${Configuration.API_PORT}/Calculations`, {
+   const result = await axios.post(`/Calculations`, {
       firstValue: calculation.firstValue, 
       secondValue: calculation.secondValue
     });
