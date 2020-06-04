@@ -10,7 +10,7 @@ RUN npm install react-scripts@3.4.1 -g
 
 COPY ./ ./
 
-CMD ["npm", "run", "build"]
+RUN npm run build
 
 FROM nginx
 EXPOSE 3000 
