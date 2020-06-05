@@ -4,9 +4,8 @@
         {
             "name": "nginx-proxy",
             "image": "ryegoryshev/multi-nginx",
-            "hostname": "proxy",
-            "essential": true,
-            "memory": 128
+            "hostname": "nginx",
+            "essential": false
         }
     ]
 }
