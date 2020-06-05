@@ -4,14 +4,8 @@
         {
             "name": "nginx-proxy",
             "image": "ryegoryshev/multi-nginx",
-            "hostname": "nginx-proxy",
+            "hostname": "proxy",
             "essential": true,
-            "portMappings": [
-                {
-                    "hostPort": 80,
-                    "containerPort": 80
-                }
-            ],
             "memory": 128
         }
     ]
