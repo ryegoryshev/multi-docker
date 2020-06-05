@@ -2,31 +2,16 @@
     "AWSEBDockerrunVersion": 2,
     "containerDefinitions": [
         {
-            "name": "web-client",
-            "image": "ryegoryshev/multi-webclient",
-            "hostname": "web-client",
-            "essential": true,
-            "memory": 128
-        },
-        {
-            "name": "api",
-            "image": "ryegoryshev/multi-api",
-            "hostname": "api",
-            "essential": false,
-            "memory": 128
-        },
-        {
             "name": "nginx",
             "image": "ryegoryshev/multi-nginx",
             "hostname": "nginx-proxy",
-            "essential": false,
+            "essential": true,
             "portMappings": [
                 {
                     "hostPort": 80,
                     "containerPort": 80
                 }
             ],
-            "links": ["web-client", "api"],
             "memory": 128
         }
     ]
