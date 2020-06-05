@@ -4,7 +4,6 @@
         {
             "name": "nginx-proxy",
             "image": "ryegoryshev/multi-nginx",
-            "hostname": "nginx-proxy",
             "essential": true,
             "portMappings": [
                 {
