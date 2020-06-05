@@ -2,7 +2,7 @@
     "AWSEBDockerrunVersion": 2,
     "containerDefinitions": [
         {
-            "name": "nginx",
+            "name": "nginx-proxy",
             "image": "ryegoryshev/multi-nginx",
             "hostname": "nginx-proxy",
             "essential": true,
