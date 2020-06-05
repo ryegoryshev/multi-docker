@@ -5,19 +5,22 @@
             "name": "web-client",
             "image": "ryegoryshev/multi-webclient",
             "hostname": "web-client",
-            "essential": true
+            "essential": true,
+            "memory": 128
         },
         {
             "name": "api",
             "image": "ryegoryshev/multi-api",
             "hostname": "api",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "nginx",
             "image": "ryegoryshev/multi-nginx",
             "hostname": "nginx",
             "essential": true,
+            "memory": 128,
             "portMappings": [
                 {
                     "hostPort": 80,
