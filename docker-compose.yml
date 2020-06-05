@@ -12,15 +12,14 @@ services:
             - PORT=$WEB_CLIENT_INTERNAL_PORT
             - REACT_APP_API_HOST=$API_HOST
             - REACT_APP_API_PORT=$API_EXTERNAL_PORT
-        ports:
-            - $WEB_CLIENT_EXTERNAL_PORT:$WEB_CLIENT_INTERNAL_PORT
+ #       ports:
+ #           - $WEB_CLIENT_EXTERNAL_PORT:$WEB_CLIENT_INTERNAL_PORT
     api:
         build: 
             dockerfile: Dockerfile.dev
             context: ./API/
-        ports:
-            - $API_EXTERNAL_PORT:$API_INTERNAL_PORT
-            - 9229:9229
+ #       ports:
+ #           - $API_EXTERNAL_PORT:$API_INTERNAL_PORT
         environment:
             - API_INTERNAL_PORT=$API_INTERNAL_PORT
             - PG_HOST=postgresql
