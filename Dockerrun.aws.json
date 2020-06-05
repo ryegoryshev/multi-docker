@@ -14,20 +14,6 @@
             "hostname": "api",
             "essential": false,
             "memory": 128
-        },
-        {
-            "name": "nginx",
-            "image": "ryegoryshev/multi-nginx",
-            "hostname": "nginx",
-            "essential": true,
-            "memory": 128,
-            "portMappings": [
-                {
-                    "hostPort": 80,
-                    "containerPort": 80
-                }
-            ],
-            "links": ["web-client", "api"]
         }
     ]
 }
