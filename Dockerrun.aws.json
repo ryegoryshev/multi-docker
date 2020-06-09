@@ -12,6 +12,21 @@
                     "containerPort": 80
                 }
             ],
+            "memory": 128,
+            "links": ["web-client", "api"]
+        },
+        {
+            "name": "web-client",
+            "image": "ryegoryshev/multi-webclient",
+            "hostname": "web-client",
+            "essential": true,
+            "memory": 128
+        },
+        {
+            "name": "api",
+            "image": "ryegoryshev/multi-api",
+            "hostname": "api",
+            "essential": false,
             "memory": 128
         }
     ]
