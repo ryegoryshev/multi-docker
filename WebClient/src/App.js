@@ -24,7 +24,9 @@ class App extends Component {
   }
 
   async fetchCalculationHistory() {
-    const history = await axios.get(`http://${Configuration.API_HOST}:${Configuration.API_PORT}/Calculations`);
+    const url = `http://${Configuration.API_HOST}:${Configuration.API_PORT}/Calculations`;
+    console.log("Get calculation history URL:" + url);
+    const history = await axios.get(url);
     return history;
   }
 
