@@ -5,7 +5,7 @@
             "name": "nginx",
             "image": "ryegoryshev/multi-nginx",
             "hostname": "nginx-proxy",
-            "essential": true,
+            "essential": false,
             "portMappings": [
                 {
                     "hostPort": 80,
